@@ -1,13 +1,168 @@
-body {
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+#root{
+  display: flex;
+}
+.border{
+  border: 1px solid black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="text"]{
+  padding: 16px 32px;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0,.2) ;
+  font-size: 18px;
 }
+
+input{
+  box-sizing: border-box;
+}
+input,textarea,select{
+  font-size: 16px;
+}
+textarea{
+  box-sizing: border-box;
+  padding: 8px 8px;
+  height: 150px;
+}
+
+.container{
+  width: 85%;
+  margin-bottom: 20px;
+}
+
+.input100{
+  width: 100%;
+  max-width: 100%;
+}
+
+.comboInput{
+  margin-top: 25px;
+}
+
+.comboInput span{
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doubleInput{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.doubleInput div{
+
+  width: 100%;
+}
+.doubleInput input,.doubleInput select{
+  width: 97%;
+  padding: 8px 16px;
+  border: 1px solid black;
+  height: 40px;
+  cursor: pointer;
+}
+button{
+  padding: 12px;
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.btnGreen{
+  background-color: rgb(37, 192, 37);
+}
+.btnDetail{
+  background-color: rgb(0 188 212);
+  padding: 12px 30px;
+  margin-right: 20px;
+}
+.btnRemove{
+  background-color: rgb(217 83 79);
+}
+
+.btnDone{
+  background-color: rgb(18, 113, 201);
+  padding: 12px 30px;
+  margin-right: 20px;
+}
+.toDoItem{
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.toDoAction{
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: rgb(166, 169, 172);
+  margin-top: 20px;
+}
+.toDoItem-headLeft{
+  align-self: center;
+}
+.toDoItem-headLeft span{
+  font-size: 20px;
+  padding-left: 16px;
+}
+.toDoItem-headLeft input{
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.item{
+  width: 100%;
+}
+.toDoEdit{
+  padding-top: 30px;
+}
+@media screen and (max-width: 846px) {
+  
+  #root{
+    flex-direction: column;
+  }
+  .newTask{
+    width: 100% !important;
+  }
+  .toDoList{
+    width: 100% !important;
+  }
+  
+}
+
+@media screen and (max-width: 1286px) {
+  .doubleInput {
+    flex-direction: column;
+  }
+  .doubleInput input, .doubleInput select{
+    width: 100%;
+  }
+}
+
+.newTask{
+  width: 45%;
+}
+.toDoList{
+  width: 55%;
+}
+
+
+
+
